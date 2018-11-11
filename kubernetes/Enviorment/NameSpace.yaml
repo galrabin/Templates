@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    application.tess.io/name: # TODO application name.
+  labels:
+    account.tess.io/name: # TODO user - grabin or other.
+  name: # TODO name space name.

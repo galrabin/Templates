@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: # TODO "Deplyment name"
+  namespace: # TODO name space to deploy.
+  annotations:
+    models.tess.io/cms-requested: # TODO application name - default "true".
+spec:
+  replicas: # TODO numebr of replications.
+  selector:
+    matchLabels:
+      app: # TODO key value pair- name of application.
+  template:
+    metadata:
+      name: # TODO name of template.
+      namespace: # TODO name space of template.
+      labels:
+        app: # TODO should be the same as match label above
+      annotations:
+        models.tess.io/cms-requested: # TODO application name - default "true".
+    spec:
+      containers:
+      - name: # TODO container name.
+        image: # TODO image url to pull from.
+        ports:
+          - containerPort: # TODO port name to expose.
+        volumeMounts:
+          - mountPath: # TODO if needed add volume path.
+            name: # TODO if needed add volume name.
+      volumes:
+        - name: # TODO if needed specify the volume mount point by volumeMounts above.
+          configMap:
+            name: # TODO if needed configmap specify the name of the config map.
+            items:
+              - key: # TODO from configmap specify the name of data required.
+                path: # TODO path to deploy the config map, pay attention its relative to volumeMounts chosen in the name.
+

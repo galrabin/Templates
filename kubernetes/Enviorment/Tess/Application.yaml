@@ -1,0 +1,12 @@
+apiVersion: apps.tess.io/v1alpha1
+kind: Application
+metadata:
+  name: # TODO application name
+  labels:
+    account.tess.io/name: # TODO account name - grabin etc
+spec:
+  appType:
+    category: web
+    type: generic
+  escalationOwner: # TODO account name - grabin etc
+  owner: # TODO account name - grabin etc
